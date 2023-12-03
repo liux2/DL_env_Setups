@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Build Dockerfile
-docker build -t liux2/app-framework-experiment:exp ./app_container/
+docker build -t {images_name}:{tag} ./app_container/
