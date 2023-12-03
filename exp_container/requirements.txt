@@ -1,0 +1,4 @@
+# sample requirements
+# protobuf
+# transformers>=4.30.2
+
