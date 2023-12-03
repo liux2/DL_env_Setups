@@ -9,7 +9,8 @@ This setup contains a way of setting up an exprimenting env with docker. The
 environment was based on [Nvidia NGC Docker Pytorch images](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch).
 The advantage of using this setup is that you don't have to setup nvcc, cuDNN,
 etc. The only thing you need is a proper Nvidia GPU driver, and nvidia-container-toolkit
-based on you system setting.
+based on you system setting. Here is a [guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
+if you need to setup nvidia-container-toolkit in Linux.
 
 To use this setup, you have to:
 1. Specify all the required packages you need in the `requirement.txt`.
