@@ -7,7 +7,7 @@
 This repo contains my ways of setting up various project environment setups.
 Please suggest more easy-to-use piplines and DL dev tips.
 
-* [中文](https://github.com/liux2/DL_env_Setups/blob/main/README.zh.md)
+[中文版本](https://github.com/liux2/DL_env_Setups/blob/main/README.zh.md)
 
 * [TODO](#todo)
 * [Docker Setups](#docker-setups)
@@ -67,7 +67,7 @@ for you. From here, you can choose to start a Jupyter-lab environment with:
 
 2. The `-v` flag with the path specified
 will attach your current dir into docker container.
-3. After the Jupyter-lab env been setup, you can choose to use the Jupyter kernal
+3. After the Jupyter-lab env been setup, you can choose to use the docker Jupyter kernal
 from VS code if you prefer local IDE setups.
 4. If you decide to migrate this env to another machine, use
 
