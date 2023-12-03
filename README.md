@@ -1,9 +1,16 @@
 # Deep Learning Environment Setups
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This repo contains my ways of setting up various project environment setups.
 Please suggest more easy-to-use piplines.
 
-## TODO:
+- [TODO](#todo)
+- [Docker Setups](#docker-setups)
+- [LLM API Setups](#llm-api-setups)
+- [Google Drive Downloader](#google-drive-downloader)
+
+## TODO
 
 - [x] Add Google drive downloader for downloading data from Google drive.
 - [ ] Add Kaggle/Huggingface downloader for opensource datasets downloading.
