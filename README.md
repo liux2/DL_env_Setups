@@ -25,6 +25,7 @@ Please suggest more easy-to-use piplines and DL dev tips.
 
 * [x] Add Kaggle downloader for opensource datasets downloading.
 * [ ] Add conda setups.
+* [ ] MLC-LLM
 
 ## Docker Setups
 
