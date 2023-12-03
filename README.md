@@ -1,16 +1,19 @@
 # Deep Learning Environment Setups
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![enUS](https://img.shields.io/badge/lang-en-blue.svg)](https://github.com/liux2/DL_env_Setups/blob/main/README.md)
+[![zhCN](https://img.shields.io/badge/lang-zh-red.svg)](https://github.com/liux2/DL_env_Setups/blob/main/README.zh.md)
 
 This repo contains my ways of setting up various project environment setups.
 Please suggest more easy-to-use piplines and DL dev tips.
+
+* [中文](https://github.com/liux2/DL_env_Setups/blob/main/README.zh.md)
 
 * [TODO](#todo)
 * [Docker Setups](#docker-setups)
 * [Conda Setups](#conda-setups)
 * [LLM API Setups](#llm-api-setups)
   * [FastChat](#fastchat)
-  * [vLLM](#vllm)
 * [Dataset Preparation](#dataset-preparation)
   * [Google Drive Downloader](#google-drive-downloader)
   * [Kaggle Dataset Downloader](#kaggle-dataset-downloader)
@@ -20,7 +23,7 @@ Please suggest more easy-to-use piplines and DL dev tips.
 
 ## TODO
 
-* [ ] Add Kaggle/Huggingface downloader for opensource datasets downloading.
+* [x] Add Kaggle downloader for opensource datasets downloading.
 * [ ] Add conda setups.
 
 ## Docker Setups
@@ -103,8 +106,6 @@ Tips:
 1. You can choose to change the backend to vLLM for faster experience with this
 [tutorial](https://github.com/lm-sys/FastChat/blob/main/docs/vllm_integration.md).
 
-### vLLM
-
 ## Dataset Preparation
 
 ### Google Drive Downloader
@@ -124,7 +125,40 @@ that looks like `https://drive.google.com/file/d/a-long-hash/view?usp=sharing`.
 
 ### Kaggle Dataset Downloader
 
+To download datasets from Kaggle, you need to:
+
+1. Go to your Kaggle account, get an API key in the API section. And download the JSON file.
+2. Open a terminal and run:
+
+    ```bash
+    pip install -q kaggle
+    pip install -q kaggle-cli
+    mkdir -p ~/.kaggle
+    cp "your/path/to/kaggle.json" ~/.kaggle/
+    cat ~/.kaggle/kaggle.json 
+    chmod 600 ~/.kaggle/kaggle.json
+
+    # For competition datasets
+        kaggle competitions download -c dataset_name -p download_to_folder
+    # For other datasets
+    kaggle datasets download -d user/dataset_name -p download_to_folder
+    ```
+
+    Replace:
+
+    * your `/path/to/kaggle.json` with your path to `kaggle.json` on drive.
+    * `download_to_folder` with the folder where you’d like to store the downloaded dataset.
+    * `dataset_name` and/or `user/dataset_name`.
+
+source: [https://towardsdatascience.com/a-quicker-way-to-download-kaggle-datasets-in-google-collab-abe90bf8c866](https://towardsdatascience.com/a-quicker-way-to-download-kaggle-datasets-in-google-collab-abe90bf8c866)
+
 ### Huggingface Dataset Downloader
+
+Huggingface `datasets` package provides a way of loading datasets easily from their Hub.
+
+* [Homepage](https://huggingface.co/docs/datasets/index)
+
+The tutorials and use cases can be found from their homepage.
 
 ## Tips
 
