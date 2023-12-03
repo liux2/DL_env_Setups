@@ -1,7 +1,13 @@
 # Deep Learning Environment Setups
 
 This repo contains my ways of setting up various project environment setups.
+Please suggest more easy-to-use piplines.
 
+## TODO:
+
+- [x] Add Google drive downloader for downloading data from Google drive.
+- [ ] Add Kaggle/Huggingface downloader for opensource datasets downloading.
+- [ ] Add conda setups.
 
 ## Docker Setups
 
@@ -39,6 +45,13 @@ To use this setup, you have to:
 3. Change any necessary params in the `docker-compose.yml`.
 4. Fireup the API with `docker compose up` and shut it down with `docker compose down`.
 
-## --
+## Google Drive Downloader
 
-Please suggest more easy-to-use piplines.
+Google drive is an easy-to-use dataset storing and sharing application. To download files
+from Goole drive to your server with exploiting the high bandwidth:
+
+1. Prepare your dataset as a compressed file, and click share file.
+2. Get your user id by requiring a Link, the id will be a long hash in the middle
+that looks like `https://drive.google.com/file/d/a-long-hash/view?usp=sharing`.
+3. Put the hash and the file name in the `scripts/gd-downloader.sh`
+4. Run with `bash scripts/gd-downloader.sh`.
