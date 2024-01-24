@@ -9,6 +9,7 @@
 
 * [待办事项](#待办事项)
 * [Docker 设置](#docker-设置)
+* [Docker Compose](#docker-compose)
 * [Conda 设置](#conda-设置)
 * [大型语言模型 API 设置](#大型语言模型-api-设置)
   * [FastChat](#fastchat)
@@ -81,6 +82,19 @@
     ```
 
     此方法在 Dockerfile 里有注释说明。
+
+## Docker Compose
+
+一种更简单的替代方案是使用 docker compose。你可以在 docker-compose 文件中设置必要的参数，并使用 docker compose up
+或 docker compose up -d 来运行，后者是在分离模式下运行。你可以通过设置以下参数来进入终端：
+
+```yml
+stdin_open: true
+tty: true
+```
+
+然后使用 docker compose exec {service_name} sh 进入。这里的 {service_name} 应该是你用于容器的名称，dev 是在
+ docker compose 文件中使用的名称。
 
 ## Conda 设置
 

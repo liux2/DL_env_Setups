@@ -11,6 +11,7 @@ Please suggest more easy-to-use piplines and DL dev tips.
 
 * [TODO](#todo)
 * [Docker Setups](#docker-setups)
+* [Docker Compose](#docker-compose)
 * [Conda Setups](#conda-setups)
 * [LLM API Setups](#llm-api-setups)
   * [FastChat](#fastchat)
@@ -83,6 +84,20 @@ from VS code if you prefer local IDE setups.
     ```
 
     to load it on the target machine.
+
+## Docker Compose
+
+An easier alternative is to use docker compose. You can set the necessary parameters
+in docker-compose file, and run with `docker compose up` or `docker compose up -d`
+for detached mode. You can enter the terminal with the follwing parameter set:
+
+```yml
+stdin_open: true
+tty: true
+```
+
+and enter with `docker compose exec {service_name} sh`. Here the {service_name} should
+be the name you used for the container, dev is the name used in docker compose file.
 
 ## Conda Setups
 
